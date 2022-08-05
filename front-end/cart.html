@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cart</title>
+
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet'
+        type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Toastr -->
+    <link rel="stylesheet" href="plugins/toastr/toastr.min.css">
+</head>
+
+<body>
+
+    <div class="header-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="user-menu">
+                        <ul>
+                            <li>
+                                <div class="dropdown show" id="dropDownUser">
+                                    <a class="btn btn-secondary dropdown-toggle" role="button" id="userInfo"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                                            class="fa fa-user"></i></a>
+                                    <div class="dropdown-menu" aria-labelledby="userInfo">
+                                        <a class="btn dropdown-item" id="logoutBtn"><i class="fas fa-sign-out-alt"></i>
+                                            Đăng xuất</a>
+                                        <a class="btn dropdown-item" href="" id="profileCustomer"><i
+                                                class="far fa-id-card"></i>
+                                            Profile</a>
+                                        <a class="btn dropdown-item" href="" id="orderCustomer"><i
+                                                class="fas fa-clipboard-list"></i> Đơn hàng</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a class="btn" href="login-customer/login.html" id="loginPage"><i
+                                        class="fa fa-user"></i>Đăng nhập</a></li>
+                            <li>
+                                <div id="adminPage" style="display: none;">
+                                    <a class="btn" href="admin-dashboard.html"><i class="fas fa-cog"></i>Quản lý cửa
+                                        hàng</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End header area -->
+
+    <div class="site-branding-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="logo">
+                        <h1><a href="./"><img src="img/logo.K-Emart.png"></a></h1>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="shopping-item">
+                        <a href="cart.html">Giỏ hàng - <span class="cart-amunt">$100</span> <i
+                                class="fa fa-shopping-cart"></i> <span class="product-count">6</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End site branding area -->
+
+    <div class="mainmenu-area">
+        <div class="container">
+            <div class="row">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="shop.html">Sản phẩm</a></li>
+                        <li class="active"><a href="cart.html">Giỏ hàng</a></li>
+                        <li><a href="checkout.html">Thanh toán</a></li>
+                        <li><a href="order-tracking.html">Theo dõi đơn hàng</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End mainmenu area -->
+
+    <div class="product-big-title-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="product-bit-title text-center">
+                        <h2>Giỏ hàng</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End Page title area -->
+
+
+    <div class="single-product-area">
+        <div class="zigzag-bottom"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="product-content-right">
+                        <div class="woocommerce">
+                            <form method="post" action="#">
+                                <table cellspacing="0" class="shop_table cart" id="cartContent">
+                                    <thead>
+                                        <tr>
+                                            <th class="product-remove">&nbsp;</th>
+                                            <th class="product-thumbnail">Hình ảnh</th>
+                                            <th class="product-name">Sản phẩm</th>
+                                            <th class="product-price">Giá tiền</th>
+                                            <th class="product-quantity">Số lượng</th>
+                                            <th class="product-subtotal">Tổng</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+                                </table>
+
+                                <div class="cart_totals">
+                                    <table cellspacing="0">
+                                        <tbody>
+                                            <tr class="cart-subtotal text-center" style="font-size: large;">
+                                                <th>Tổng giá sản phẩm</th>
+                                                <td><span class="amount" id="cartTotal"></span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <table cellspacing="0" class="shop_table cart">
+                                    <tr>
+                                        <td class="actions" colspan="6">
+                                            <div class="coupon">
+                                                <label for="coupon_code">Mã giảm giá:</label>
+                                                <input type="text" placeholder="Điền mã giảm giá" value=""
+                                                    id="coupon_code" class="input-text" name="coupon_code">
+                                                <a name="apply_coupon" class="button-process">Áp dụng</a>
+                                            </div>
+                                            <a name="update_cart" class="button-process">Cập nhật giỏ</a>
+                                            <a name="proceed" href="checkout.html" class="button-process">Thanh toán</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer-top-area">
+        <div class="zigzag-bottom"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="footer-about-us">
+                        <h2><span>K-Emart</span></h2>
+                        <p>Mang đến những trải nghiệm tuyệt vời với thế thế công nghệ đầy màu sắc và hứng thú
+                            Địa chỉ cửa hàng: TP.HCM
+                        </p>
+                        <div class="footer-social">
+                            <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+                            <a href="#" target="_blank"><i class="fa fa-youtube"></i></a>
+                            <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="footer-menu">
+                        <h2 class="footer-wid-title">Danh mục sản phẩm</h2>
+                        <ul>
+                            <li><a href="#">Smart phone</a></li>
+                            <li><a href="#">Smart watch</a></li>
+                            <li><a href="#">Tablet</a></li>
+                            <li><a href="#">Laptop</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="footer-newsletter">
+                        <h2 class="footer-wid-title">Đăng ký nhận thông tin</h2>
+                        <p>Đăng ký để nhận những thông tin sản phẩm và chương trình khuyến mãi mới nhất</p>
+                        <div class="newsletter-form">
+                            <form action="#">
+                                <input type="email" placeholder="Nhập địa chỉ email">
+                                <input type="submit" value="Đăng ký">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End footer top area -->
+
+    <div class="footer-bottom-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="copyright">
+                        <p>&copy; 2015 uCommerce. All Rights Reserved. <a href="http://www.freshdesignweb.com"
+                                target="_blank">freshDesignweb.com</a></p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="footer-card-icon">
+                        <i class="fa fa-cc-discover"></i>
+                        <i class="fa fa-cc-mastercard"></i>
+                        <i class="fa fa-cc-paypal"></i>
+                        <i class="fa fa-cc-visa"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End footer bottom area -->
+
+    <!-- Latest jQuery form server -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+    <!-- Bootstrap JS form CDN -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <!-- jQuery sticky menu -->
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+
+    <!-- jQuery easing -->
+    <script src="js/jquery.easing.1.3.min.js"></script>
+
+    <!-- Show product number in cart -->
+    <script src="js/display.item.num.cart.js"></script>
+
+    <!-- Toastr -->
+    <script src="plugins/toastr/toastr.min.js"></script>
+
+    <!-- Main Script -->
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+
+    <!--Authentication-->
+    <script src="js/shop-auth.js"></script>
+</body>
+
+</html>

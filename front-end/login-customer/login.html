@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <div class="login-reg-panel">
+        <div class="login-info-box">
+            <h2>Đã có tài khoản?</h2>
+            <p>Hãy đăng nhập để trải nghiệm</p>
+            <label id="label-register" for="log-reg-show">Đăng nhập</label>
+            <input type="radio" name="active-log-panel" id="log-reg-show" checked="checked">
+        </div>
+
+        <div class="register-info-box">
+            <h2>Chưa có tài khoản?</h2>
+            <p>Hãy đăng ký tại đây</p>
+            <label id="label-login" for="log-login-show">Đăng ký</label>
+            <input type="radio" name="active-log-panel" id="log-login-show">
+        </div>
+
+        <div class="white-panel">
+            <div class="login-show">
+                <h2>ĐĂNG NHẬP</h2>
+                <input type="text" placeholder="Email" id="emailLogin">
+                <input type="password" placeholder="Password" id="passwordLogin">
+                <p id="loginError" style="color: red;"></p>
+                <input type="button" value="Đăng nhập" id="loginBtn">
+                <a href="">Quên mật khẩu?</a>
+            </div>
+            <div class="register-show">
+                <h4>ĐĂNG KÝ</h4>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <input type="text" placeholder="Họ" id="lastNameInput">
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="text" placeholder="Tên" id="firstNameInput">
+                    </div>
+                </div>
+                <input type="text" placeholder="Địa chỉ" id="addressInput">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <input type="text" placeholder="Thành phố" id="cityInput">
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="text" placeholder="Số điện thoại" id="phoneInput">
+                    </div>
+                </div>
+                <input type="text" placeholder="Email" id="emailRegister">
+                <input type="password" placeholder="Password" id="passwordRegister">
+                <input type="password" placeholder="Confirm Password" id="confirmPasswordRegister">
+                <p id="registerError" style="color: red;"></p>
+                <input type="button" value="Đăng ký" id="registerBtn">
+            </div>
+        </div>
+    </div>
+
+    <!--Modal info-->
+    <div class="modal" role="dialog" id="modalInfo">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Thông Báo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="showInfo"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--===============================================================================================-->
+    <script src="js/jquery/jquery-3.2.1.min.js"></script>
+    <script src="bootstrap/js/popper.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/register.js"></script>
+</body>
+
+</html>
